@@ -11,7 +11,7 @@ function drawLine() {
 
 //Teken letter rode K  
    myContext.lineWidth = 20;
-   myContext.strokeStyle = 'red';
+   myContext.strokeStyle = "red";
    myContext.beginPath();
    myContext.moveTo(250, 250);
    myContext.lineTo(250, 700);
@@ -29,7 +29,7 @@ function drawLine() {
 
    //Teken letter gele a
    myContext.lineWidth = 20;
-   myContext.strokeStyle = 'yellow';
+   myContext.strokeStyle = "yellow";
    myContext.beginPath();
    myContext.moveTo(800, 400);
    myContext.lineTo(850, 400);
@@ -45,7 +45,7 @@ function drawLine() {
 
    //Teken letter paarse t
    myContext.lineWidth = 20;
-   myContext.strokeStyle = 'purple';
+   myContext.strokeStyle = "purple";
    myContext.beginPath();
    myContext.moveTo(1050, 300);
    myContext.lineTo(1050, 650);
@@ -74,7 +74,7 @@ function drawLine() {
 
    //Teken letter roze ij
    myContext.lineWidth = 20;
-   myContext.strokeStyle = 'pink';
+   myContext.strokeStyle = "pink";
    myContext.beginPath();
    myContext.moveTo(1625, 500);
    myContext.lineTo(1625, 700);
@@ -99,7 +99,7 @@ function drawLine() {
 
    //Teken letter blauwe n
    myContext.lineWidth = 20;
-   myContext.strokeStyle = 'blue';
+   myContext.strokeStyle = "blue";
    myContext.beginPath();
    myContext.moveTo(2000, 400);
    myContext.lineTo(2000, 700);

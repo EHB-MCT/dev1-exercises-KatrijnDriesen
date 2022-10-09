@@ -11,7 +11,7 @@ function drawLine() {
 
    //Teken rood kruis
    myContext.lineWidth = 10;
-   myContext.strokeStyle = 'red';
+   myContext.strokeStyle = "red";
    myContext.beginPath();
    myContext.moveTo(50, 50);
    myContext.lineTo(250, 250);
@@ -24,7 +24,7 @@ function drawLine() {
  
  //Teken zwart vierkant
    myContext.lineWidth = 10;
-   myContext.strokeStyle = 'black';
+   myContext.strokeStyle = "black";
    myContext.beginPath();
    myContext.moveTo(50, 50);
    myContext.lineTo(250, 50);
