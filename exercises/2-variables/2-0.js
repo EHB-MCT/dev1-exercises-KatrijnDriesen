@@ -1,5 +1,5 @@
 "use strict";
-let myContext
+let myContext;
 
 setup();
 drawHouse ();
@@ -33,7 +33,7 @@ function drawHouse () {
 myContext.fillStyle = "#a52a2a";
 myContext.fillRect(x,y,100,100);
 myContext.fillStyle = "#af8a5a";
-myContext.fillRect(x+50,y+50,25,50)
+myContext.fillRect(x+50,y+50,25,50);
 myContext.fillStyle = "#666666";
 myContext.beginPath();
 myContext.moveTo(x,y);
