@@ -8,12 +8,12 @@ context.strokeStyle = "white";
 
 drawMoreLines ();
 
-function drawMoreLines(){
-for (let i=0;i<60;i++){
+function drawMoreLines() {
+for (let i=0; i<60; i++) {
     Utils.drawLine(10*i,0,600-10*i,300);
     }
 
-for (let j=0;j<=30;j++){
+for (let j=0; j<=30; j++) {
         Utils.drawLine(0,j*10,600,300-j*10);
     }
 }
