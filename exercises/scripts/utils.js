@@ -78,6 +78,18 @@ export function rgb(r,g,b) {
 }
 
 
+/** function that formats an rgba value based on parameters
+ * @param {number} r percentage of reds
+ * @param {number} g percentage of greens
+ * @param {number} b percentage of blues
+ * @param {number} a percentage of transparancy
+ */
+
+ export function rgba(r,g,b,a) {
+    return "rgb("+r+"%,"+g+"%,"+b+"%,"+a+"%)";
+}
+
+
 /** function that formats an hsl value based on parameters
  * @param {number} h the hue in degrees
  * @param {number} s the saturation in percentage
@@ -86,4 +98,15 @@ export function rgb(r,g,b) {
 
  export function hsl(h,s,l) {
     return "hsl("+h+","+s+"%,"+l+"%)";
+}
+
+/** function that formats an hsla value based on parameters
+ * @param {number} h the hue in degrees
+ * @param {number} s the saturation in percentage
+ * @param {number} l the lightness in percentage
+ * @param {number} a the transparancy in percentage
+ */
+
+ export function hsla(h,s,l,a) {
+    return "hsl("+h+","+s+"%,"+l+"%"+a+"%)";
 }
