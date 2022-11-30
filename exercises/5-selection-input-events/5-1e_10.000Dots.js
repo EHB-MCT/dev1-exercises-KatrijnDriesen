@@ -16,8 +16,10 @@ function drawDots() {
        let x = Math.random() * width;
        let y = Math.random() * height;
  
-       if ((x < (width / 4) || x > (width * 3 / 4)) || (y < (height / 4) || y > (height * 3 / 4))) {
-          context.fillStyle = "blue";
+       let distance = Utils.calculateDistance(x,y,width/2,height/2);
+
+       if (distance < 250) {
+          context.fillStyle = "red";
        }
        else {
           context.fillStyle = "white";
@@ -26,3 +28,4 @@ function drawDots() {
        Utils.fillCircle(x, y, 2);
     }
  }
+

@@ -3,6 +3,17 @@
 import context from "./context.js";
 
 /**
+ * calculates distance
+ * @param {number} x1  x-coordinate of the first point
+ * @param {number} y1  y-coordinate of the first point
+ * @param {number} x2  x-coordinate of the 2nd pointe
+ * @param {number} y2  y-coordinate of the 2nd point
+ */
+ export function calculateDistance(x1, y1, x2, y2){
+    return Math.hypot(x2 - x1, y2 - y1);
+}
+
+/**
  * fills a circle
  * @param {number} x  x-coordinate of the center of the circle
  * @param {number} y  y-coordinate of the center of the circle
