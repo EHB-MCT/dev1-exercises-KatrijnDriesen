@@ -58,9 +58,9 @@ function drawRandomText(x,y){
     if (randomNumber == 11) {
         context.fillText("J", x + 125/2, y + 150);
     } else if (randomNumber == 12){
-        context.fillText("K", x + 125/2, y + 150);
+        context.fillText("Q", x + 125/2, y + 150);
     } else if (randomNumber == 13){
-        context.fillText("L", x + 125/2, y + 150);
+        context.fillText("K", x + 125/2, y + 150);
     } else {
         context.fillText(randomNumber, x+125/2, y+150);
     }
