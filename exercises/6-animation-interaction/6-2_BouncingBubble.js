@@ -4,7 +4,6 @@ import * as Utils from "../scripts/utils.js";
 
 let width = context.canvas.width;
 let height = context.canvas.height;
-let frameCount = 0;
 let xPos = width / 2;
 let yPos = height / 2;
 let xSpeed = 10;
