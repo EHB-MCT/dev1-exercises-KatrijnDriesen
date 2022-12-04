@@ -32,13 +32,21 @@ function setup (){
     Utils.fillCircle (frogX - distancePaw, frogY + distancePaw, 5);
 
     //draw cars
+    let posXCarA = 0;
+    let posXCarB = width - 150;
     let spaceWindow = 5;
+    let heigthCar = height / 10;
     context.fillStyle = "red";
-    context.fillRect(0, height * 17 / 60, 150, height / 10);
-    context.fillRect(width - 150, height * 37 / 60, 150, height / 10);
+    context.fillRect(posXCarA, height * 17 / 60, 150, heigthCar);
+    context.fillRect(posXCarB, height * 37 / 60, 150, heigthCar);
     context.fillStyle = "lightblue";
-    context.fillRect(0 + spaceWindow, height * 17 / 60 + spaceWindow, 30, height / 10 - spaceWindow * 2);
-    context.fillRect(100, height * 17 / 60 + spaceWindow, 50-spaceWindow, height / 10 - spaceWindow * 2);
-    context.fillRect(width - 150 + spaceWindow, height * 37 / 60 + spaceWindow, 50, height / 10 - spaceWindow * 2);
-    context.fillRect(width - 30, height * 37 / 60 + spaceWindow, 30-spaceWindow, height / 10 - spaceWindow * 2);
+    context.fillRect(posXCarA + spaceWindow, height * 17 / 60 + spaceWindow, 30, heigthCar - spaceWindow * 2);
+    context.fillRect(posXCarA + 100, height * 17 / 60 + spaceWindow, 50-spaceWindow, heigthCar - spaceWindow * 2);
+    context.fillRect(posXCarB + spaceWindow, height * 37 / 60 + spaceWindow, 50, heigthCar - spaceWindow * 2);
+    context.fillRect(posXCarB + 120, height * 37 / 60 + spaceWindow, 30-spaceWindow, heigthCar - spaceWindow * 2);
 }
+
+//if {speed cars -1}
+//requestAnimationFrame
+//onmouseup, down, left, right --> x,y pos frog
+//redraw background
