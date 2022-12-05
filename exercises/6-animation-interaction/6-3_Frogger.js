@@ -47,6 +47,7 @@ function moveFrog (eventData) {
 
 function update() {
     let isPlaying = 1;
+    let safetyMarginFrog = 5;
     if (isPlaying == 1) {
         
         drawBackground ();    
@@ -62,7 +63,7 @@ function update() {
             speedCar *= -1;
         }
 
-        if (((posFrogX >= posXCarA && posFrogX <= posXCarA + 150) && (posFrogY >= posYCarA && posFrogY <= posYCarA + heigthCar)) || ((posFrogX >= posXCarB && posFrogX <= posXCarB + 150) && (posFrogY >= posYCarB && posFrogY <= posYCarB + heigthCar))) {
+        if (((posFrogX >= posXCarA && posFrogX <= posXCarA + 150) && (posFrogY >= posYCarA-safetyMarginFrog && posFrogY <= posYCarA + heigthCar + safetyMarginFrog)) || ((posFrogX >= posXCarB && posFrogX <= posXCarB + 150) && (posFrogY >= posYCarB-safetyMarginFrog && posFrogY <= posYCarB + heigthCar+safetyMarginFrog))) {
             isPlaying *= -1;
             context.fillStyle = "red";
             context.textAlign = "center";
