@@ -12,7 +12,9 @@ let posFrogY = height * 5.5 / 6;
 let distancePaw = 17;
 let isPlaying = 1;
 let posXCarA = 0;
+let posYCarA = height * 17 / 60;
 let posXCarB = width - 150;
+let posYCarB = height * 37 / 60;
 let spaceWindow = 5;
 let heigthCar = height / 10;
 let speed = 1;
@@ -27,7 +29,7 @@ window.onkeydown = moveFrog;
 setup ();
 update ();
 
-function setup (){
+function setup () {
     
     drawBackground ();   
 
@@ -64,7 +66,22 @@ function update() {
             speed *= -1;
         }
 
-        requestAnimationFrame (update);
+        if (((posFrogY >= posYCarA && posFrogY <= posYCarA + 150) && (posFrogX >= posXCarA && posFrogX <= posXCarA + 150)) || ((posFrogY >= posYCarB && posFrogY <= posYCarB + 150) && (posFrogX >= posXCarB && posFrogX <= posXCarB + 150))) {
+            isPlaying *= -1;
+            context.fillStyle = "red";
+            context.textAlign = "center";
+            context.font = "normal 50pt Arial";
+            context.textBaseline = "middle";
+            context.fillText("Game over :(", width/2, height/2);
+        } else if (posFrogY + moveFrogY - 75 <= 0) {
+            isPlaying *= -1;
+            context.fillStyle = "green";
+            context.textAlign = "center";
+            context.font = "normal 50pt Arial";
+            context.textBaseline = "middle";
+            context.fillText("You win! :)", width/2, height/2);
+        } else {requestAnimationFrame (update);
+        }
     }
 }
 
@@ -90,12 +107,22 @@ function drawFrog () {
 
 function drawCars () {
     context.fillStyle = "red";
-    context.fillRect(posXCarA, height * 17 / 60, 150, heigthCar);
-    context.fillRect(posXCarB, height * 37 / 60, 150, heigthCar);
+    context.fillRect(posXCarA, posYCarA, 150, heigthCar);
+    context.fillRect(posXCarB, posYCarB, 150, heigthCar);
     context.fillStyle = "lightblue";
-    context.fillRect(posXCarA + spaceWindow, height * 17 / 60 + spaceWindow, 30, heigthCar - spaceWindow * 2);
-    context.fillRect(posXCarA + 100, height * 17 / 60 + spaceWindow, 50-spaceWindow, heigthCar - spaceWindow * 2);
-    context.fillRect(posXCarB + spaceWindow, height * 37 / 60 + spaceWindow, 50, heigthCar - spaceWindow * 2);
-    context.fillRect(posXCarB + 120, height * 37 / 60 + spaceWindow, 30-spaceWindow, heigthCar - spaceWindow * 2);
+    context.fillRect(posXCarA + spaceWindow, posYCarA + spaceWindow, 30, heigthCar - spaceWindow * 2);
+    context.fillRect(posXCarA + 100, posYCarA + spaceWindow, 50-spaceWindow, heigthCar - spaceWindow * 2);
+    context.fillRect(posXCarB + spaceWindow, posYCarB + spaceWindow, 50, heigthCar - spaceWindow * 2);
+    context.fillRect(posXCarB + 120, posYCarB + spaceWindow, 30-spaceWindow, heigthCar - spaceWindow * 2);
 }
-//hitcar
+
+/* function endGame(eventData){
+    let x = eventData.pageX;
+    let y = eventData.pageY;
+    if (Utils.calculateDistance(x, y, xPos, yPos) < size || Utils.calculateDistance(x, y, xPos, yPos) < size) {
+        isPlaying *= -1;
+        context.fillStyle = "red";
+        context.textAlign = "center";
+        context.fillText("Game over", width/2, height/2);
+    }
+} */
