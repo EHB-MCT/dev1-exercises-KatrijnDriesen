@@ -20,9 +20,12 @@ function setup() {
 
 function draw() {
     if (isPlaying == 1) {
+        setup();
+        
         for (let i = 0; i<=4; i++) {
         drawSnail(space / 2, space * i + space / 2, space, 1+i);
         }
+        
         /* if (x>=width) {
             isPlaying *= -1;
             context.fillStyle = "red";
