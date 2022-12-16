@@ -21,7 +21,7 @@ function setup() {
             size: Utils.randomNumber(),
             alpha: Utils.randomNumber(20,60),
             speed: 1 + Math.random() * 5
-        }
+        };
 
     snowFlakes.push(snowFlake);
     }
