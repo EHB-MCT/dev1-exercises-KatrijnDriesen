@@ -32,9 +32,17 @@ function draw() {
     for (let i = 0; i<200; i++) {
         setup();
         console.log(speed1[0]);
-        if (speed1[i] < width-space) {
+        if (speed1[i] < width-space || speed2[i] < width-space || speed3[i] < width-space || speed4[i] < width-space || speed5[i] < width-space) {
             speed1.push(speed1[i] + Math.random()*5);
             drawSnail(speed1[i], space / 2, space, 1);
+            speed2.push(speed2[i] + Math.random()*5);
+            drawSnail(speed2[i], space / 2 * 3, space, 2);
+            speed3.push(speed3[i] + Math.random()*5);
+            drawSnail(speed3[i], space / 2 * 5, space, 3);
+            speed4.push(speed4[i] + Math.random()*5);
+            drawSnail(speed4[i], space / 2 * 7, space, 4);
+            speed5.push(speed5[i] + Math.random()*5);
+            drawSnail(speed5[i], space / 2 * 9, space, 5);
             
         } else {
             context.fillStyle = "red";
