@@ -132,7 +132,7 @@ export function rgb(r,g,b) {
  */
 
  export function hsla(h,s,l,a) {
-    return "hsl("+h+","+s+"%,"+l+"%"+a+"%)";
+    return "hsla("+h+","+s+"%,"+l+"%"+a+"%)";
 }
 
 /** function gives a random number between two values
@@ -140,6 +140,6 @@ export function rgb(r,g,b) {
  * @param {number} y maximum value
  */
 
- export function randomNumber(x,y) {
-    return Math.floor(Math.random()*(y-x)+x);
+ export function randomNumber(min,max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
