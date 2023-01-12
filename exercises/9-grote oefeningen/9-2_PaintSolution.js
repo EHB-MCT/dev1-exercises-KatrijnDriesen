@@ -1,6 +1,6 @@
 "use strict";
-import context from "../scripts/context.js";
-import * as Utils from "../scripts/utils.js";
+import context from "./scripts/context.js";
+import * as Utils from "./scripts/utils.js";
 
 let width = context.canvas.width;
 let height = context.canvas.height;
@@ -34,6 +34,12 @@ function setup() {
     clear();
 }
 
+function clear() {
+    context.fillStyle = "black";
+    context.fillRect(0, 0, width, height);
+    drawColorCircle();
+}
+
 function drawColorCircle() {
     context.fillStyle = "black";
     context.fillRect(width - 220, 0, 220, 220);
@@ -45,12 +51,6 @@ function drawColorCircle() {
         context.fillRect(width - 210 + i, 220, 1, 50);
     }
 
-}
-
-function clear() {
-    context.fillStyle = "black";
-    context.fillRect(0, 0, width, height);
-    drawColorCircle();
 }
 
 /**
