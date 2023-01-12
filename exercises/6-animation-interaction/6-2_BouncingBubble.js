@@ -6,20 +6,19 @@ let width = context.canvas.width;
 let height = context.canvas.height;
 let xPos = width / 2;
 let yPos = height / 2;
-let xSpeed = 10;
-let ySpeed = 10;
+let xSpeed = 2;
+let ySpeed = 2;
 let isPlaying = 1;
 let size = 40;
 
 window.onmousedown = stop;
 
 setup();
+update();
 
 function setup(){
     context.fillStyle = "blue";
     Utils.fillCircle(xPos, yPos, size);
-
-    update();
 }
 
 function update(){
