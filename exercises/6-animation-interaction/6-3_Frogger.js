@@ -32,19 +32,6 @@ function setup () {
     drawCars ();
 }
 
-function moveFrog (eventData) {
-    let speedFrog = 5;
-    if (eventData.code == "ArrowUp") {
-        posFrogY -= speedFrog;
-    } else if (eventData.code == "ArrowDown") {
-        posFrogY += speedFrog;
-    } else if (eventData.code == "ArrowLeft") {
-        posFrogX -= speedFrog;
-    } else if (eventData.code == "ArrowRight") {
-        posFrogX += speedFrog;
-    }
-}
-
 function update() {
     let isPlaying = 1;
     let safetyMarginFrog = 5;
@@ -82,6 +69,19 @@ function update() {
     }
 }
 console.log(posFrogY);
+
+function moveFrog (eventData) {
+    let speedFrog = 5;
+    if (eventData.code == "ArrowUp") {
+        posFrogY -= speedFrog;
+    } else if (eventData.code == "ArrowDown") {
+        posFrogY += speedFrog;
+    } else if (eventData.code == "ArrowLeft") {
+        posFrogX -= speedFrog;
+    } else if (eventData.code == "ArrowRight") {
+        posFrogX += speedFrog;
+    }
+}
 
 function drawBackground () {
     let heightStreet = height / 6;
