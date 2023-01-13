@@ -24,7 +24,7 @@ function drawTapistry(){
                 context.fillStyle = "red";
                 context.fillRect(j * 50, i * 50, 50, 50);
             }
-            if (j < 10) {
+            if (i%2 == 1 && j%2 == 0 && j>i) {
                 context.fillStyle = "red";
                 context.fillRect(j * 50, i * 50, 50, 50);
             }
@@ -32,3 +32,7 @@ function drawTapistry(){
         }
     }
 }
+
+//extra challenges
+//snakes
+//space invader
