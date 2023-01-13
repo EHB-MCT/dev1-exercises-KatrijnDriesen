@@ -128,11 +128,10 @@ export function rgb(r,g,b) {
  * @param {number} h the hue in degrees
  * @param {number} s the saturation in percentage
  * @param {number} l the lightness in percentage
- * @param {number} a the transparancy in percentage
+ * @param {number} a the alpha value (opacity) in percentage
  */
-
- export function hsla(h,s,l,a) {
-    return "hsla("+h+","+s+"%,"+l+"%"+a+"%)";
+export function hsla(h, s, l, a) {
+    return "hsl(" + h + "," + s + "%," + l + "%," + a + "%)";
 }
 
 /** function gives a random number between two values
